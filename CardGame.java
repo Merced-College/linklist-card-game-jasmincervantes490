@@ -1,4 +1,8 @@
 //package linkedLists;
+// Name: Jasmin Cervantes
+// Date: 11/29/2024
+// For this assignment I added a shuffle method in LinkList.java and in CardGame.java I called the method to shuffle the method and then display it
+// I used AI to help me create the shuffle method.
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -56,6 +60,11 @@ public class CardGame {
         cardList.shuffle();
         System.out.println("Deck shuffled!");
 		
+        // Since the cards were printed before shuffling the deck, I am calling the displayList method to display the newly shuffled deck
+        // Display the shuffled deck
+        System.out.println("\nShuffled deck:");
+        cardList.displayList();
+
 		Card[] playerHand = new Card[5];
 		for(int i = 0; i < playerHand.length; i++)
 			playerHand[i] = cardList.getFirst();

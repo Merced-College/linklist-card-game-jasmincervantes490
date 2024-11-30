@@ -1,3 +1,9 @@
+// Name: Jasmin Cervantes
+// Date: 11/29/2024
+// For this assignment I added a shuffle method in LinkList.java and in CardGame.java I called the method to shuffle the method and then display it
+// I used AI to help me create the shuffle method.
+
+
 import java.util.ArrayList;
 import java.util.Collections;
 

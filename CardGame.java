@@ -49,6 +49,12 @@ public class CardGame {
         // Print the loaded cards
         System.out.println("Cards loaded:");
         cardList.displayList();
+
+        // Code Added: Calling the shuffle method created in Link List
+        // Shuffle the deck before starting the game
+        System.out.println("\nShuffling the deck...");
+        cardList.shuffle();
+        System.out.println("Deck shuffled!");
 		
 		Card[] playerHand = new Card[5];
 		for(int i = 0; i < playerHand.length; i++)

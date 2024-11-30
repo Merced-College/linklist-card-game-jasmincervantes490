@@ -81,6 +81,7 @@ public class LinkList
 	//-------------------------------------------------------------
 
 	//-------------------------------------------------------------
+	// Code Added: Method created to shuffle the deck of cards
 	// Shuffle the linked list
     public void shuffle() {
         if (first == null || first.next == null) {

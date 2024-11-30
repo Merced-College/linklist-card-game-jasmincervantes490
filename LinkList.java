@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class LinkList
 {
@@ -76,7 +78,48 @@ public class LinkList
 		first = first.next;             //    change first
 		return current.cardLink;
 	}
+	//-------------------------------------------------------------
 
+	//-------------------------------------------------------------
+	// Shuffle the linked list
+    public void shuffle() {
+        if (first == null || first.next == null) {
+            return; // No need to shuffle if the list is empty or has one element
+        }
+
+        // Step 1: Transfer nodes to an ArrayList
+        ArrayList<Card> cardArray = new ArrayList<>();
+        Link current = first;
+        while (current != null) {
+            cardArray.add(current.cardLink);
+            current = current.next;
+        }
+
+        // Step 2: Shuffle the ArrayList
+        Collections.shuffle(cardArray);
+
+        // Step 3: Rebuild the linked list from the shuffled ArrayList
+        first = null; // Clear the list
+        for (Card card : cardArray) {
+            add(card); // Add each shuffled card back to the list
+        }
+    }
+
+    //-------------------------------------------------------------
+	//necessary to be able to shuffle the deck of cards and store the Card data
+    private class Link {
+		// Inner class for a link
+        public Card cardLink; // Data in the link
+        public Link next; // Next link in list
+
+        public Link(Card cardLink) {
+            this.cardLink = cardLink;
+        }
+
+        public void displayLink() {
+            System.out.print(cardLink + " ");
+        }
+    }
 }  // end class LinkList
 ////////////////////////////////////////////////////////////////
 /*class LinkedLists
